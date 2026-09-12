@@ -41,7 +41,7 @@ h3 { font-size:1.35rem; font-weight:600; }
 .button.secondary { color:var(--accent); background:transparent; }
 .button:hover { transform:translateY(-3px); box-shadow:0 10px 25px rgba(255,255,255,.16); }
 .visual { position:relative; min-height:450px; display:grid; place-items:center; }
-.profile-art { position:relative; width:min(390px,82%); aspect-ratio:.76; overflow:hidden; border:14px solid var(--surface); border-radius:28px; background:var(--midnight); box-shadow:0 0 0 1px var(--wine),var(--shadow); animation:float 7s ease-in-out infinite; }
+.profile-art { position:relative; width:min(390px,82%); aspect-ratio:.76; overflow:hidden; border:14px solid var(--surface); border-radius:28px; background:var(--midnight); box-shadow:var(--shadow); animation:float 7s ease-in-out infinite; }
 .profile-photo { width:100%; height:100%; display:block; object-fit:cover; object-position:center 42%; filter:saturate(.88) contrast(1.04); transform:scale(1.02); }
 .photo-shade { position:absolute; inset:0; background:linear-gradient(180deg,rgba(4,13,17,.08) 32%,rgba(4,13,17,.6) 100%); pointer-events:none; }
 .profile-art::after { content:''; position:absolute; width:250px; height:250px; top:-75px; right:-75px; border-radius:50%; background:radial-gradient(circle,rgba(111,16,37,.38),transparent 67%); }
