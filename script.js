@@ -3,18 +3,18 @@ const toggle = document.querySelector('#theme-toggle');
 const menuButton = document.querySelector('#menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 const savedTheme = localStorage.getItem('elaine-theme');
-if (savedTheme === 'light') root.classList.add('light');
+if (savedTheme === 'dark') root.classList.add('dark');
 
 function updateThemeButton() {
-  const light = root.classList.contains('light');
-  toggle.textContent = light ? '☾' : '☼';
-  toggle.setAttribute('aria-label', light ? 'Switch to dark mode' : 'Switch to light mode');
+  const dark = root.classList.contains('dark');
+  toggle.textContent = dark ? '☼' : '☾';
+  toggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
 }
 
 updateThemeButton();
 toggle.addEventListener('click', () => {
-  root.classList.toggle('light');
-  localStorage.setItem('elaine-theme', root.classList.contains('light') ? 'light' : 'dark');
+  root.classList.toggle('dark');
+  localStorage.setItem('elaine-theme', root.classList.contains('dark') ? 'dark' : 'light');
   updateThemeButton();
 });
 
