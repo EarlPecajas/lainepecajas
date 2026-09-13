@@ -104,6 +104,9 @@ h3 { font-size:1.35rem; font-weight:600; }
 .filter:hover,.filter.active { border-color:var(--gold); color:var(--gold); background:rgba(176,141,59,.1); }
 .job.is-hidden { display:none; }
 .tool-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.tool-categories { display:grid; gap:34px; }
+.tool-category h3 { margin:0 0 14px; color:var(--accent); font:800 .78rem/1.3 'DM Sans',sans-serif; letter-spacing:.12em; text-transform:uppercase; }
+.tool-category .tool-grid { grid-template-columns:repeat(4,1fr); }
 .tool { position:relative; overflow:hidden; min-height:68px; display:grid; place-content:center; padding:17px 15px; text-align:center; color:var(--muted); border:1px solid var(--line); border-radius:8px; background:var(--surface); transition:transform .25s ease,color .25s ease,border-color .25s ease,box-shadow .25s ease,background .25s ease; }
 .tool small { display:block; margin-top:4px; font-size:.72rem; line-height:1.45; opacity:.82; }
 .tool::after { content:'↗'; position:absolute; right:12px; bottom:8px; color:var(--accent); font-size:.78rem; opacity:0; transform:translate(-5px,5px); transition:opacity .25s ease,transform .25s ease; }
