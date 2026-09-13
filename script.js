@@ -54,5 +54,5 @@ const filters = document.querySelectorAll('.filter');
 filters.forEach(filter => filter.addEventListener('click', () => {
   filters.forEach(item => item.classList.toggle('active', item === filter));
   const selected = filter.dataset.filter;
-  document.querySelectorAll('.job').forEach(job => job.classList.toggle('is-hidden', selected !== 'all' && job.dataset.category !== selected));
+  document.querySelectorAll('.job').forEach(job => job.classList.toggle('is-hidden', selected !== 'all' && !job.dataset.category.split(' ').includes(selected)));
 }));
