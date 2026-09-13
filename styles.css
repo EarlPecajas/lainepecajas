@@ -70,7 +70,7 @@ h3 { font-size:1.35rem; font-weight:600; }
 .card-grid { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:16px; }
 .card { padding:25px; border:1px solid var(--line); border-radius:4px; background:var(--surface); transition:transform .25s ease,border-color .25s ease,background .25s ease; }
 .card-grid .card { grid-column:span 3; min-height:184px; padding:26px 27px 24px; }
-.card-grid .card:nth-child(5) { grid-column:1 / -1; width:calc(50% - 8px); justify-self:center; }
+.card-grid .card:nth-child(5) { grid-column:span 3; width:auto; justify-self:stretch; }
 .skill-index { display:block; margin-bottom:19px; color:var(--accent); font-size:.7rem; font-weight:800; letter-spacing:.14em; }
 .card-grid .card { position:relative; overflow:hidden; transition:transform .25s ease,color .25s ease,border-color .25s ease,box-shadow .25s ease,background .25s ease; }
 .card-grid .card::after { content:'↗'; position:absolute; right:14px; bottom:10px; color:var(--accent); font-size:.78rem; opacity:0; transform:translate(-5px,5px); transition:opacity .25s ease,transform .25s ease; }
