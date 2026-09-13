@@ -56,3 +56,28 @@ filters.forEach(filter => filter.addEventListener('click', () => {
   const selected = filter.dataset.filter;
   document.querySelectorAll('.job').forEach(job => job.classList.toggle('is-hidden', selected !== 'all' && !job.dataset.category.split(' ').includes(selected)));
 }));
+
+const certificateViewer = document.querySelector('#certificate-viewer');
+const certificateViewerImage = document.querySelector('#certificate-viewer-image');
+const certificateClose = document.querySelector('#certificate-close');
+document.querySelectorAll('.certificate-card a').forEach(link => link.addEventListener('click', event => {
+  event.preventDefault();
+  certificateViewerImage.src = link.href;
+  certificateViewerImage.alt = link.querySelector('img').alt;
+  certificateViewer.hidden = false;
+  document.body.classList.add('viewer-open');
+  certificateClose.focus();
+}));
+function closeCertificateViewer() {
+  if (!certificateViewer) return;
+  certificateViewer.hidden = true;
+  certificateViewerImage.src = '';
+  document.body.classList.remove('viewer-open');
+}
+if (certificateClose) certificateClose.addEventListener('click', closeCertificateViewer);
+if (certificateViewer) certificateViewer.addEventListener('click', event => {
+  if (event.target === certificateViewer) closeCertificateViewer();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closeCertificateViewer();
+});
